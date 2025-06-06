@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
-  <title>𝗦𝗮𝗵𝗶𝗹 𝗪𝗲𝗯 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗔𝗹𝗹 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 </title>
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝗦𝗮𝗵𝗶𝗹 𝗪𝗲𝗯 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗔𝗹𝗹 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲</title>
+  <!-- Only include production version of React -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <style>
     body {
@@ -18,7 +20,7 @@
     h2 {
       text-align: center;
       color: #00ffe1;
-      font-size: 2.5em;
+      font-size: 2em;
       margin-top: 20px;
     }
 
@@ -95,65 +97,133 @@
       border-radius: 30px;
       font-size: 16px;
       text-decoration: none;
+      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebc5b;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 1);
     }
 
     input, button {
       outline: none;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .service-box {
+        width: 100%;
+        max-width: 350px;
+      }
+      .paid-services {
+        width: 90%;
+      }
+      h2 {
+        font-size: 1.8em;
+      }
+    }
   </style>
-</head>
-<body>
-
-<section id="services">
-  <h2>🌐 My Services</h2>
-  <div class="services-container">
+ </head>
+ <body>
+  <section id="services">
+   <h2>🌐 My Services</h2>
+   <div class="services-container">
+    <!-- React Component Mount -->
     <div class="service-box">
-      <h3>SIM Details Lookup</h3>
-      <div id="sim-lookup-root"></div>
+     <h3>SIM Details Lookup</h3>
+     <div id="sim-lookup-root"></div>
     </div>
-    <div class="service-box"><h3>SIM Ownership & Call Records</h3><p>Legally accessed telecom records for clients under formal request & consent.</p></div>
-    <div class="service-box"><h3>NADRA Family Tree & Data</h3><p>Assistance in retrieving official NADRA family data via proper legal channels.</p></div>
-    <div class="service-box"><h3>Cybersecurity & Mobile Forensics</h3><p>Ethical hacking, mobile device forensics & security checks for digital safety.</p></div>
-    <div class="service-box"><h3>CDR & WhatsApp Logs</h3><p>Retrieval of communication records under authorized use for investigation.</p></div>
-    <div class="service-box"><h3>Digital Subscriptions</h3><p>Secure access to Netflix, YouTube, Skype, and more through verified sources.</p></div>
-    <div class="service-box"><h3>Social Media Growth</h3><p>Boost your brand with organic followers, likes, comments on TikTok, Insta & more.</p></div>
-    <div class="service-box"><h3>ID & Degree Verification</h3><p>Support with official documentation and degree validation for legal use.</p></div>
-    <div class="service-box"><h3>Ethical Hacking Course</h3><p>Complete course in bug bounty, penetration testing, and white-hat hacking skills.</p></div>
-  </div>
-
-  <h2>💸 Our Paid Services:</h2>
-  <div class="paid-services">
-    <div class="paid-box">All network Fresh Number Details (Name, CNIC, Address)</div>
-    <div class="paid-box">All numbers against CNIC</div>
-    <div class="paid-box">Nadra CNIC Verification</div>
-    <div class="paid-box">Pin Point Location</div>
-    <div class="paid-box">Family Tree</div>
-    <div class="paid-box">CDR (Call Data Record)</div>
-    <div class="paid-box">IMEI Tracking (Stolen or Lost Mob Trace)</div>
-    <div class="paid-box">Fake WhatsApp Number</div>
-    <div class="paid-box">Vehicle Details</div>
-    <div class="paid-box">Marriage Certificate (Copy)</div>
-    <div class="paid-box">Death Certificate (Copy)</div>
-    <div class="paid-box">FRC (Family Registration Certificate)</div>
-    <div class="paid-box">Vaccination (Corona, Booster, Polio)</div>
-    <div class="paid-box">Travel History</div>
-    <div class="paid-box">Passport Details</div>
-    <div class="paid-box">Fake Calling Software (Private, Unknown Number)</div>
-    <div class="paid-box">More Trusted Services Available</div>
-  </div>
-
-  <a href="https://wa.me/923496049312" class="whatsapp-button">Contact on WhatsApp</a>
-</section>
-
-<!-- ✅ About Me Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <p style="max-width: 800px; margin: 0 auto; text-align: center; padding: 20px; background-color: rgba(0, 0, 0, 0.6); border-radius: 12px; color: #00ffe1;">
-    میں ایک ماہر اور سند یافتہ ایتھیکل ہیکر ہوں، جو قانونی سائبر تحقیقات، سوشل میڈیا گروتھ، موبائل فارنزکس اور تصدیق شدہ ڈیٹا کی بازیابی میں کئی سالوں کا تجربہ رکھتا ہوں۔
-  </p>
-</section>
-
-<script type="text/babel">
+    <div class="service-box">
+     <h3>SIM Ownership &amp; Call Records</h3>
+     <p>Legally accessed telecom records for clients under formal request &amp; consent.</p>
+    </div>
+    <div class="service-box">
+     <h3>NADRA Family Tree &amp; Data</h3>
+     <p>Assistance in retrieving official NADRA family data via proper legal channels.</p>
+    </div>
+    <div class="service-box">
+     <h3>Cybersecurity &amp; Mobile Forensics</h3>
+     <p>Ethical hacking, mobile device forensics &amp; security checks for digital safety.</p>
+    </div>
+    <div class="service-box">
+     <h3>CDR &amp; WhatsApp Logs</h3>
+     <p>Retrieval of communication records under authorized use for investigation.</p>
+    </div>
+    <div class="service-box">
+     <h3>Digital Subscriptions</h3>
+     <p>Secure access to Netflix, YouTube, Skype, and more through verified sources.</p>
+    </div>
+    <div class="service-box">
+     <h3>Social Media Growth</h3>
+     <p>Boost your brand with organic followers, likes, comments on TikTok, Insta &amp; more.</p>
+    </div>
+    <div class="service-box">
+     <h3>ID &amp; Degree Verification</h3>
+     <p>Support with official documentation and degree validation for legal use.</p>
+    </div>
+    <div class="service-box">
+     <h3>Ethical Hacking Course</h3>
+     <p>Complete course in bug bounty, penetration testing, and white-hat hacking skills.</p>
+    </div>
+   </div>
+   <h2>💸 Our Paid Services:</h2>
+   <div class="paid-services">
+    <div class="paid-box">
+     All network Fresh Number Details (Name, CNIC, Address)
+    </div>
+    <div class="paid-box">
+     All numbers against CNIC
+    </div>
+    <div class="paid-box">
+     Nadra CNIC Verification
+    </div>
+    <div class="paid-box">
+     Pin Point Location
+    </div>
+    <div class="paid-box">
+     Family Tree
+    </div>
+    <div class="paid-box">
+     CDR (Call Data Record)
+    </div>
+    <div class="paid-box">
+     IMEI Tracking (Stolen or Lost Mob Trace)
+    </div>
+    <div class="paid-box">
+     Fake WhatsApp Number
+    </div>
+    <div class="paid-box">
+     Vehicle Details
+    </div>
+    <div class="paid-box">
+     Marriage Certificate (Copy)
+    </div>
+    <div class="paid-box">
+     Death Certificate (Copy)
+    </div>
+    <div class="paid-box">
+     FRC (Family Registration Certificate)
+    </div>
+    <div class="paid-box">
+     Vaccination (Corona, Booster, Polio)
+    </div>
+    <div class="paid-box">
+     Travel History
+    </div>
+    <div class="paid-box">
+     Passport Details
+    </div>
+    <div class="paid-box">
+     Fake Calling Software (Private, Unknown Number)
+    </div>
+    <div class="paid-box">
+     More Trusted Services Available
+    </div>
+   </div>
+   <a href="https://wa.me/923496049312" class="whatsapp-button">Contact on WhatsApp</a>
+  </section>
+  <script type="text/babel">
   const { useState } = React;
 
   const SimDetailsLookup = () => {
@@ -209,6 +279,5 @@
 
   ReactDOM.render(<SimDetailsLookup />, document.getElementById('sim-lookup-root'));
 </script>
-
-</body>
+ </body>
 </html>
